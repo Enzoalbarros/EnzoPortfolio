@@ -1,7 +1,242 @@
 <!DOCTYPE html>
-    <head>
-        <title>Enzo's Portfolio</title>
-    </head>
-    <body>Data Analyst</body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enzo's Portfolio</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #111827;
+      --card: #1f2937;
+      --text: #f3f4f6;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.15);
+      --border: #334155;
+    }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, #020617 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1000px, 92vw);
+      margin: 0 auto;
+      padding: 2.5rem 0 3rem;
+    }
+
+    .hero {
+      display: grid;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+      padding: 1.8rem;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+      margin-bottom: 0.2rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 65ch;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      list-style: none;
+    }
+
+    .contact-list li {
+      border: 1px solid var(--border);
+      background: var(--bg-soft);
+      border-radius: 999px;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    section {
+      margin: 1.4rem 0;
+      padding: 1.3rem;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(17, 24, 39, 0.9);
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.7rem;
+      color: var(--accent);
+    }
+
+    .timeline-item,
+    .project-card {
+      padding: 0.95rem;
+      margin-top: 0.8rem;
+      border-radius: 10px;
+      background: var(--card);
+      border: 1px solid var(--border);
+    }
+
+    .timeline-item h3,
+    .project-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 0.45rem;
+    }
+
+    ul {
+      padding-left: 1.1rem;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      list-style: none;
+      margin-top: 0.65rem;
+    }
+
+    .skills li {
+      background: var(--accent-soft);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      border-radius: 999px;
+      padding: 0.35rem 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    .resume-note {
+      border: 1px dashed rgba(56, 189, 248, 0.6);
+      background: rgba(56, 189, 248, 0.08);
+      padding: 0.9rem;
+      border-radius: 10px;
+      color: #e2e8f0;
+      margin-top: 0.6rem;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 2rem;
+      font-size: 0.92rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div>
+        <h1>Enzo - Data Analyst Portfolio</h1>
+        <p>
+          I transform raw data into clear insights and practical business decisions.
+          This site highlights my resume details, professional strengths, and personal projects.
+        </p>
+      </div>
+      <ul class="contact-list">
+        <li>Email: your.email@example.com</li>
+        <li>LinkedIn: linkedin.com/in/your-profile</li>
+        <li>GitHub: github.com/your-username</li>
+        <li>Location: Your City, Country</li>
+      </ul>
+    </header>
+
+    <section aria-labelledby="resume-heading">
+      <h2 id="resume-heading">Resume Overview</h2>
+      <p>
+        Results-focused data analyst with experience in data cleaning, dashboard creation,
+        and business reporting. Strong in SQL, spreadsheet modeling, and turning complex datasets
+        into concise recommendations.
+      </p>
+
+      <div class="timeline-item">
+        <h3>Data Analyst - Example Company</h3>
+        <p class="meta">2022 - Present</p>
+        <ul>
+          <li>Built weekly KPI dashboards to monitor revenue, retention, and campaign performance.</li>
+          <li>Automated repetitive reports and reduced manual effort by 40%.</li>
+          <li>Collaborated with marketing and product teams to improve conversion insights.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Junior Analyst - Example Company</h3>
+        <p class="meta">2020 - 2022</p>
+        <ul>
+          <li>Prepared executive-friendly reporting from multiple data sources.</li>
+          <li>Improved data quality checks and documented analytics workflows.</li>
+        </ul>
+      </div>
+
+      <ul class="skills" aria-label="skills list">
+        <li>SQL</li>
+        <li>Excel / Google Sheets</li>
+        <li>Power BI / Tableau</li>
+        <li>Python (Pandas)</li>
+        <li>A/B Testing</li>
+        <li>Data Storytelling</li>
+      </ul>
+
+      <p class="resume-note">
+        Resume file placeholder: you can add a downloadable PDF link later (for example,
+        a button linking to <code>resume.pdf</code>).
+      </p>
+    </section>
+
+    <section aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Personal Projects</h2>
+
+      <article class="project-card">
+        <h3>Sales Performance Dashboard</h3>
+        <p class="meta">Tools: SQL, Power BI</p>
+        <p>
+          Built an interactive dashboard to track regional sales, top products, and trends over time.
+          Designed visuals for fast executive reporting and monthly planning.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <h3>Customer Churn Analysis</h3>
+        <p class="meta">Tools: Python, Pandas, Matplotlib</p>
+        <p>
+          Analyzed churn behavior and identified leading indicators of attrition.
+          Proposed retention-focused actions based on cohort and usage patterns.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <h3>Marketing Campaign Insights</h3>
+        <p class="meta">Tools: Spreadsheet Modeling, SQL</p>
+        <p>
+          Evaluated campaign ROI and channel-level performance.
+          Created a reusable reporting template to compare campaign outcomes consistently.
+        </p>
+      </article>
+    </section>
+
+    <footer>
+      © <span id="year">2026</span> Enzo. Built with HTML and CSS.
+    </footer>
+  </main>
+</body>
 </html>
